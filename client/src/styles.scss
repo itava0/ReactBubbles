@@ -97,3 +97,13 @@ form {
     margin-top: 16px;
   }
 }
+
+.Form {
+  margin-top: -300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  input {
+    width: 800px;
+  }
+}

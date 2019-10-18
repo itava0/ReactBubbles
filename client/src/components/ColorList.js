@@ -28,8 +28,14 @@ const ColorList = ({ colors, updateColors }) => {
       // return back the color update
       .then(res => {
         //needs to UpdateColors
-        console.log(res.data)
-        updateColors([...colors, res.data])
+        const newItem = colors.map(item => {
+          if( item.id === res.data.id) {
+            return res.data
+          }
+          return item
+        })
+        console.log(newItem)
+        updateColors(newItem)
       })
       .catch(err => console.log(err.response))
   };
